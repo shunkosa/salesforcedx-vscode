@@ -21,7 +21,7 @@ import { FilePathGatherer, SfCommandlet, SfWorkspaceChecker } from './util';
 
 export class LibraryDeployManifestExecutor extends DeployExecutor<string> {
   constructor() {
-    super(nls.localize('deploy_text'), 'deploy_with_manifest_beta');
+    super(nls.localize('deploy_this_source_text'), 'deploy_with_manifest');
   }
 
   protected async getComponents(
@@ -43,7 +43,7 @@ export class LibraryDeployManifestExecutor extends DeployExecutor<string> {
   }
 }
 
-export async function deployManifest(manifestUri: vscode.Uri) {
+export const deployManifest = async (manifestUri: vscode.Uri) => {
   if (!manifestUri) {
     const editor = vscode.window.activeTextEditor;
     if (editor && editor.document.languageId === 'forcesourcemanifest') {
@@ -51,14 +51,14 @@ export async function deployManifest(manifestUri: vscode.Uri) {
     } else {
       const errorMessage = nls.localize('deploy_select_manifest');
       telemetryService.sendException('deploy_with_manifest', errorMessage);
-      notificationService.showErrorMessage(errorMessage);
+      void notificationService.showErrorMessage(errorMessage);
       channelService.appendLine(errorMessage);
       channelService.showChannelOutput();
       return;
     }
   }
 
-  const messages = getConflictMessagesFor('deploy_with_manifest_beta');
+  const messages = getConflictMessagesFor('deploy_with_manifest');
 
   if (messages) {
     const commandlet = new SfCommandlet(
@@ -69,4 +69,4 @@ export async function deployManifest(manifestUri: vscode.Uri) {
     );
     await commandlet.run();
   }
-}
+};

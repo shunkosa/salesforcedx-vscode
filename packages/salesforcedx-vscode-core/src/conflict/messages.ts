@@ -7,13 +7,13 @@
 import { SfCommandBuilder } from '@salesforce/salesforcedx-utils-vscode';
 import { ConflictDetectionMessages } from '../commands/util';
 
-export function getConflictMessagesFor(
+export const getConflictMessagesFor = (
   logName: string
-): ConflictDetectionMessages | undefined {
+): ConflictDetectionMessages | undefined => {
   const warningMessageKey = 'conflict_detect_conflicts_during_deploy';
   const messagesByLogName: Map<string, ConflictDetectionMessages> = new Map([
     [
-      'deploy_with_sourcepath_beta',
+      'deploy_with_sourcepath',
       {
         warningMessageKey,
         commandHint: inputs => {
@@ -34,7 +34,7 @@ export function getConflictMessagesFor(
       }
     ],
     [
-      'deploy_with_manifest_beta',
+      'deploy_with_manifest',
       {
         warningMessageKey,
         commandHint: input => {
@@ -53,4 +53,4 @@ export function getConflictMessagesFor(
     throw new Error(`No conflict messages found for ${logName}`);
   }
   return conflictMessages;
-}
+};

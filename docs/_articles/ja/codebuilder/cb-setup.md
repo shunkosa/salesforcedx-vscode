@@ -5,9 +5,11 @@ lang: ja
 
 コードビルダーを有効にすると、サポートされている Salesforce エディションにコードビルダー管理パッケージをインストールするために必要な権限を利用できるようになります。
 
-### 必要なエディション
+### サポートされているエディション
 
 **次で使用可能**: Enterprise、Performance、Professional、および Unlimited エディションの Lightning Experience
+
+Code Builder isn't available in sandboxes. However, during the development lifecycle, you can deploy code from Code Builder in a supported edition to a sandbox.
 
 **次で使用不可能**: 欧州連合 (EU) オペレーティングゾーン。EU オペレーティングゾーンは強化されたレベルのデータレジデンシーコミットメントを提供する特別な有料サービスです。コードビルダーは、標準の製品利用規約に従って、EU オペレーティングゾーンに含まれない EU 内の組織でサポートされます。
 

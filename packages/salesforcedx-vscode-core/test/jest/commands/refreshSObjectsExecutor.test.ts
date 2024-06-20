@@ -10,6 +10,7 @@ import {
   SObjectTransformer,
   SObjectTransformerFactory
 } from '@salesforce/salesforcedx-sobjects-faux-generator';
+import { LocalCommandExecution } from '@salesforce/salesforcedx-utils-vscode';
 import { EventEmitter } from 'events';
 import * as fs from 'fs';
 import { channelService } from '../../../src/channels';
@@ -46,14 +47,27 @@ describe('RefreshSObjectsExecutor', () => {
     expect(channelServiceSpy).not.toHaveBeenCalled();
   });
 
-  async function doExecute(
+  it('should fire the command completion event once the command is finished successfully', async () => {
+    const fireSpy = jest.spyOn(
+      RefreshSObjectsExecutor.refreshSObjectsCommandCompletionEventEmitter,
+      'fire'
+    );
+
+    await doExecute(SObjectRefreshSource.Startup, SObjectCategory.STANDARD);
+
+    expect(fireSpy).toHaveBeenCalledWith({
+      exitCode: LocalCommandExecution.SUCCESS_CODE
+    });
+  });
+
+  const doExecute = async (
     source: SObjectRefreshSource,
     category?: SObjectCategory
-  ) {
+  ) => {
     const executor = new RefreshSObjectsExecutor();
     await executor.execute({
       type: 'CONTINUE',
       data: { category: category || SObjectCategory.ALL, source }
     });
-  }
+  };
 });

@@ -91,6 +91,8 @@ import {
   SfCommandletExecutor,
   SfWorkspaceChecker
 } from './commands/util';
+
+import { CommandEventDispatcher } from './commands/util/commandEventDispatcher';
 import {
   PersistentStorageService,
   registerConflictView,
@@ -114,6 +116,7 @@ import { orgBrowser } from './orgBrowser';
 import { OrgList } from './orgPicker';
 import { isSalesforceProjectOpened } from './predicates';
 import { SalesforceProjectConfig } from './salesforceProject';
+import { getCoreLoggerService } from './services/getCoreLoggerService';
 import { registerPushOrDeployOnSave, salesforceCoreSettings } from './settings';
 import { taskViewService } from './statuses';
 import { showTelemetryMessage, telemetryService } from './telemetry';
@@ -385,6 +388,11 @@ const registerCommands = (
     renameLightningComponent
   );
 
+  const getCoreLoggerServiceCmd = vscode.commands.registerCommand(
+    'sf.vscode.core.logger.get.instance',
+    getCoreLoggerService
+  );
+
   return vscode.Disposable.from(
     renameLightningComponentCmd,
     diffFolder,
@@ -443,7 +451,8 @@ const registerCommands = (
     orgLoginWebDevHubCmd,
     orgLogoutAllCmd,
     orgLogoutDefaultCmd,
-    orgOpenCmd
+    orgOpenCmd,
+    getCoreLoggerServiceCmd
   );
 };
 
@@ -632,6 +641,7 @@ export const activate = async (extensionContext: vscode.ExtensionContext) => {
   const commands = registerCommands(extensionContext);
   extensionContext.subscriptions.push(commands);
   extensionContext.subscriptions.push(registerConflictView());
+  extensionContext.subscriptions.push(CommandEventDispatcher.getInstance());
 
   const api: any = {
     channelService,
@@ -656,7 +666,8 @@ export const activate = async (extensionContext: vscode.ExtensionContext) => {
       ChannelService,
       SalesforceProjectConfig,
       TelemetryService,
-      WorkspaceContext
+      WorkspaceContext,
+      CommandEventDispatcher
     }
   };
 

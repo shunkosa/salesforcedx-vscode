@@ -19,7 +19,7 @@ import { FilePathGatherer, SfCommandlet, SfWorkspaceChecker } from './util';
 
 export class LibraryRetrieveManifestExecutor extends RetrieveExecutor<string> {
   constructor() {
-    super(nls.localize('retrieve_text'), 'retrieve_with_manifest_beta');
+    super(nls.localize('retrieve_this_source_text'), 'retrieve_with_manifest');
   }
 
   protected async getComponents(
@@ -42,7 +42,9 @@ export class LibraryRetrieveManifestExecutor extends RetrieveExecutor<string> {
   }
 }
 
-export async function retrieveManifest(explorerPath: vscode.Uri) {
+export const retrieveManifest = async (
+  explorerPath: vscode.Uri
+): Promise<void> => {
   if (!explorerPath) {
     const editor = vscode.window.activeTextEditor;
     if (editor && editor.document.languageId === 'forcesourcemanifest') {
@@ -63,4 +65,4 @@ export async function retrieveManifest(explorerPath: vscode.Uri) {
     new LibraryRetrieveManifestExecutor()
   );
   await commandlet.run();
-}
+};

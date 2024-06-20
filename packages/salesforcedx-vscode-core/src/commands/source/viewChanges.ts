@@ -13,41 +13,33 @@ import { SourceTrackingGetStatusExecutor } from './sourceTrackingGetStatusExecut
 
 const workspaceChecker = new SfWorkspaceChecker();
 const parameterGatherer = new EmptyParametersGatherer();
-function getCommandletFor(
+const getCommandletFor = (
   executor: SourceTrackingGetStatusExecutor
-): SfCommandlet<{}> {
-  return new SfCommandlet(workspaceChecker, parameterGatherer, executor);
-}
+): SfCommandlet<{}> =>
+  new SfCommandlet(workspaceChecker, parameterGatherer, executor);
 
-export async function viewAllChanges() {
-  const executionName = 'view_all_changes_text';
-  const logName = 'view_all_changes';
+export const viewAllChanges = (): void => {
+  viewChanges('view_all_changes_text', 'view_all_changes', true, true);
+};
+
+export const viewLocalChanges = (): void => {
+  viewChanges('view_local_changes_text', 'view_local_changes', true, false);
+};
+
+export const viewRemoteChanges = (): void => {
+  viewChanges('view_remote_changes_text', 'view_remote_changes', false, true);
+};
+
+const viewChanges = (
+  executionName: string,
+  logName: string,
+  local: boolean,
+  remote: boolean
+): void => {
   const executor = new SourceTrackingGetStatusExecutor(executionName, logName, {
-    local: true,
-    remote: true
+    local,
+    remote
   });
   const commandlet = getCommandletFor(executor);
-  await commandlet.run();
-}
-
-export async function viewLocalChanges() {
-  const executionName = 'view_local_changes_text';
-  const logName = 'view_local_changes';
-  const executor = new SourceTrackingGetStatusExecutor(executionName, logName, {
-    local: true,
-    remote: false
-  });
-  const commandlet = getCommandletFor(executor);
-  await commandlet.run();
-}
-
-export async function viewRemoteChanges() {
-  const executionName = 'view_remote_changes_text';
-  const logName = 'view_remote_changes';
-  const executor = new SourceTrackingGetStatusExecutor(executionName, logName, {
-    local: false,
-    remote: true
-  });
-  const commandlet = getCommandletFor(executor);
-  await commandlet.run();
-}
+  void commandlet.run();
+};

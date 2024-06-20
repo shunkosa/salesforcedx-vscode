@@ -14,7 +14,7 @@
     "color": "#ECECEC",
     "theme": "light"
   },
-  "version": "60.8.0",
+  "version": "61.1.2",
   "publisher": "salesforce",
   "license": "BSD-3-Clause",
   "engines": {
@@ -24,23 +24,24 @@
     "Other"
   ],
   "dependencies": {
-    "@salesforce/core": "6.7.4",
-    "@salesforce/salesforcedx-sobjects-faux-generator": "60.8.0",
-    "@salesforce/salesforcedx-utils-vscode": "60.8.0",
+    "@jsforce/jsforce-node": "3.2.0",
+    "@salesforce/core": "7.3.10",
+    "@salesforce/salesforcedx-sobjects-faux-generator": "61.1.2",
+    "@salesforce/salesforcedx-utils-vscode": "61.1.2",
     "@salesforce/schemas": "^1.6.1",
-    "@salesforce/source-deploy-retrieve": "10.3.3",
-    "@salesforce/templates": "^60.1.0",
+    "@salesforce/source-deploy-retrieve": "11.6.5",
+    "@salesforce/templates": "^61.0.1",
     "@salesforce/ts-types": "2.0.9",
+    "@salesforce/vscode-service-provider": "1.0.4",
     "adm-zip": "0.5.10",
     "applicationinsights": "1.0.7",
     "glob": "^7.1.2",
-    "jsforce": "2.0.0-beta.29",
     "rxjs": "^5.4.1",
     "sanitize-filename": "^1.6.1",
     "shelljs": "0.8.5"
   },
   "devDependencies": {
-    "@salesforce/salesforcedx-test-utils-vscode": "60.8.0",
+    "@salesforce/salesforcedx-test-utils-vscode": "61.1.2",
     "@salesforce/ts-sinon": "^1.0.0",
     "@types/adm-zip": "^0.5.0",
     "@types/chai": "4.3.3",
@@ -57,6 +58,8 @@
     "@typescript-eslint/parser": "6.9.0",
     "chai": "^4.0.2",
     "cross-env": "5.2.0",
+    "esbuild": "^0.19.5",
+    "esbuild-plugin-pino": "^2.1.0",
     "eslint": "8.52.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-header": "3.1.1",
@@ -96,17 +99,17 @@
       "main": "dist/index.js",
       "dependencies": {
         "applicationinsights": "1.0.7",
-        "@salesforce/core": "6.7.4",
-        "@salesforce/source-tracking": "5.1.11",
-        "@salesforce/templates": "^60.1.0",
-        "@salesforce/source-deploy-retrieve": "10.3.3",
+        "@salesforce/core": "7.3.10",
+        "@salesforce/source-tracking": "6.3.4",
+        "@salesforce/templates": "^61.0.1",
+        "@salesforce/source-deploy-retrieve": "11.6.5",
         "shelljs": "0.8.5"
       },
       "devDependencies": {}
     }
   },
   "scripts": {
-    "bundle:extension": "esbuild ./src/index.ts  --bundle --outfile=dist/index.js --format=cjs --platform=node --external:vscode  --external:@salesforce/core --external:applicationinsights --external:shelljs --external:@salesforce/source-tracking --external:@salesforce/templates --external:@salesforce/source-deploy-retrieve --minify",
+    "bundle:extension": "node ./esbuild.config.js",
     "vscode:prepublish": "npm prune --production",
     "vscode:package": "ts-node  ../../scripts/vsce-bundled-extension.ts",
     "vscode:sha256": "node ../../scripts/generate-sha256.js >> ../../SHA256",
@@ -610,6 +613,10 @@
         {
           "command": "sf.metadata.view.component.refresh",
           "when": "sf:project_opened && sf:has_target_org"
+        },
+        {
+          "command": "sf.vscode.core.logger.get.instance",
+          "when": "false"
         }
       ]
     },
@@ -800,7 +807,7 @@
       },
       {
         "command": "sf.retrieve.source.path",
-        "title": "%retrieve_text%"
+        "title": "%retrieve_this_source_text%"
       },
       {
         "command": "sf.retrieve.current.source.file",
@@ -812,7 +819,7 @@
       },
       {
         "command": "sf.deploy.source.path",
-        "title": "%deploy_text%"
+        "title": "%deploy_this_source_text%"
       },
       {
         "command": "sf.deploy.current.source.file",
@@ -909,6 +916,10 @@
       {
         "command": "sf.rename.lightning.component",
         "title": "%rename_lightning_component_text%"
+      },
+      {
+        "command": "sf.vscode.core.logger.get.instance",
+        "title": "%vscode_core_services_get_logger%"
       }
     ],
     "configuration": {
