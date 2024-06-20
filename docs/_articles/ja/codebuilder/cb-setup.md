@@ -1,95 +1,91 @@
 ---
-title: Set Up Code Builder
-lang: en
+title: コードビルダーの設定
+lang: ja
 ---
 
-Enable Code Builder to provide the permissions needed to install the Code Builder managed package in a supported Salesforce edition.
+コードビルダーを有効にすると、サポートされている Salesforce エディションにコードビルダー管理パッケージをインストールするために必要な権限を利用できるようになります。
 
-### Required Editions
+### 必要なエディション
 
-**Available in**: Lightning Experience in Enterprise, Performance, Professional, and Unlimited Editions.
+**次で使用可能**: Enterprise、Performance、Professional、および Unlimited エディションの Lightning Experience
 
-**Not Available in**: EU Operating Zone. EU Operating zone is a special paid offering that provides an enhanced level of data residency commitment. Code Builder is supported in orgs in the EU that aren’t part of EU OZ, per standard product terms and conditions.
+**次で使用不可能**: 欧州連合 (EU) オペレーティングゾーン。EU オペレーティングゾーンは強化されたレベルのデータレジデンシーコミットメントを提供する特別な有料サービスです。コードビルダーは、標準の製品利用規約に従って、EU オペレーティングゾーンに含まれない EU 内の組織でサポートされます。
 
-## Enable and Install Code Builder
+## コードビルダーを有効化しインストールする
 
-To install Code Builder in a Professional Edition org, the org must have API access. If you attempt to install Code Builder in a Professional Edition org without API access, an installation error occurs. To request the API add-on, contact your Account Executive.
+Professional Edition の組織にコードビルダーをインストールするには、組織に API アクセス権が必要です。API アクセスなしでコードビルダーを Professional Edition 組織にインストールしようとすると、インストールエラーが発生します。API アドオンをリクエストするには、アカウントエグゼクティブに連絡してください。
 
-**Note**: Turning on Code Builder in Government Cloud Plus organizations can send data outside the authorization boundary. Contact your Salesforce account executive for more details.
+**注**: Government Cloud Plus 組織でコードビルダーを有効化すると、組織はセキュリティ認可境界の外にデータを送信できるようになります。詳細は担当のアカウントエグゼクティブに連絡してください。
 
-1. From Setup, enter Code Builder in the Quick Find box, then select Code Builder.
+1. [設定] から [クイック検索] に「`コードビルダー`」と入力し、**[コードビルダー]** を選択します。
 
-2. Enable Code Builder, and then review and accept the license agreement, which allows you to install the package.You can disable the preference at any time. If Code Builder is already installed, disabling the preference prevents access to the Code Builder application.
+2. コードビルダーを有効化し、製品条件を確認して同意すると、パッケージのインストールが可能になります。コードビルダーがすでにインストールされている場合、設定を無効にすると、コードビルダーアプリケーションにアクセスできなくなります。
 
-3. Click **Install Package**.
-   After the installer launches, you’re guided through the installation process to install the latest version of the Code Builder managed package. You can come back to this Setup page to reinstall or upgrade the package.
+3. **パッケージのインストール** をクリックします。
+   インストーラの起動後、最新バージョンのコードビルダー管理パッケージをインストールするためのインストールプロセスが表示されます。パッケージの再インストールやアップグレードは、この設定ページに戻って行うことができます。
 
-4. Select **Install for All Users**, and then click **Install**.
+4. **すべてのユーザーのインストール** を選択し、**インストール** をクリックします。
 
-5. Approve third-party access and click **Continue**.
+5. サードパーティアクセスを承認し、**次へ** をクリックします。
 
-The code Builder Dashboard in now available in App Launcher. Be sure to assign the appropriate Code Builder permission sets to team members.
+コードビルダーダッシュボードがアプリケーションランチャーから利用可能になります。チームメンバーに適切なコードビルダーの権限セットを割り当ててください。
 
-## Confirm Code Builder Package Installation
+## コードビルダーがインストールされたことを確認する
 
-When installation is completed, you receive a confirmation email. You can confirm the installation on the Installed Packages Setup page.
+インストールが完了すると、確認のメールが届きます。インストール済パッケージの設定画面からインストールを確認することもできます。
 
-From Setup, enter `Installed Packages` in the Quick Find box, then select **Installed Packages**. You see an entry for Code Builder that looks something like this. If you get the message that the app is taking a long time to install, you get automatically redirected to this page after you click **Done**.
+設定からクイック検索ボックスに `インストール済パッケージ` と入力し、**インストール済パッケージ** を選択します。次のようなコードビルダーの行が表示されます。アプリケーションのインストールに時間がかかっている場合は、**Done (完了)** をクリックするとこのページに自動的にリダイレクトされます。
 
-![Installed Package](./images/installed_package.png)
+![インストール済みパッケージ](./images/installed_package.png)
 
-## Add Team Members as Users in the Code Builder Org
+## コードビルダーの組織にユーザーとしてチームメンバーを追加する
 
-Code Builder is accessed through a user-based license and works with the [Identity](https://help.salesforce.com/s/articleView?id=sf.users_license_types_available.htm&type=5) or the [Free Limited Access](https://help.salesforce.com/s/articleView?id=release-notes.rn_sfdx_dev_hub.htm&release=218&type=5) licenses.
+コードビルダーは、ユーザーベースのライセンスを通してアクセスでき、[Identity](https://help.salesforce.com/s/articleView?id=sf.users_license_types_available.htm&type=5) ライセンスまたは [Free Limited Access](https://help.salesforce.com/s/articleView?id=release-notes.rn_sfdx_dev_hub.htm&release=218&type=5) ライセンスで動作します。
 
-The number of Code Builder licenses available depends on the Salesforce edition:
+利用可能なコードビルダーライセンスの数は Salesforce のエディションに依存します。
 
+| Salesforce エディション    | Professional | Enterprise | Unlimited | トライアル組織                                   |
+| -------------------------- | ------------ | ---------- | --------- | ------------------------------------------------ |
+| コードビルダーユーザーの数 | 10           | 40         | 100       | 組織のエディションが<br>コードビルダーを含む場合 |
 
-| Salesforce Edition      | Professional      |  Enterprise     |  Unlimited     |   Trial    |
-|  ---  |  ---  |  ---  |  ---  |  ---  |
-|     Code Builder Users  |  10     |  40     |  100     | If org edition includes Code Builder.|
+**Note**: 追加のコードビルダーのユーザライセンスはスクラッチ組織のアドオン購入の一部として利用可能です。各スクラッチ組織アドオン毎に 1 つのコードビルダーユーザライセンスが付与されます。[『Salesforce Add-on Pricing (英語)』](https://www.salesforce.com/content/dam/web/en_us/www/documents/pricing/all-add-ons.pdf)を参照してください。
 
+コードビルダー組織にまだユーザーではないチームメンバーを追加する手順は次の通りです。
 
+1. コードビルダーの組織にログインします。
+2. 設定から、クイック検索ボックスに `ユーザー` と入力し、**ユーザー**を選択します。
+3. **New User (新規ユーザー)** または **Add Multiple Users (複数のユーザーの追加)** をクリックします。
+4. ユーザーのロールに基づいて適切なライセンス種別を選択します。
+5. **Generate passwords and notify user via email (パスワードをリセットしてメールで通知する)** チェックボックスをチェックします。
+6. **Save (保存)** をクリックします。
 
+**注**: この手順により、新しいユーザーを組織に招待するメールが送信されます。ただし、コードビルダーの設定が完了するまで、組織内でユーザーが実行できる操作はほとんどありません。チームにコードビルダーを設定していることを知らせ、ログインする前に連絡を待つように伝えることをお勧めします。
 
-**Note**: Additional Code Builder user licenses are available as a part of a scratch org add-on purchase. Each scratch org add-on gives you one Code Builder user license. See [Salesforce Add-on Pricing](https://www.salesforce.com/content/dam/web/en_us/www/documents/pricing/all-add-ons.pdf) for more information.
+## 権限を割り当てる
 
-Add any team members who aren’t already users in the Code Builder org:
+システム管理者としてユーザー権限を割り当てる手順は次の通りです。
 
-1. Log in to the Code Builder org.
-2. From Setup, enter `Users` in the Quick Find box, then select **Users.**
-3. Click **New User** or **Add Multiple Users**.
-4. Select the appropriate license type and profile based on the user’s role.
-5. Select the **Generate passwords and notify user via email** checkbox.
-6. Click **Save**.
+1. 設定から、クイック検索に `Permission Set Groups (権限セットグループ)` と入力し、**権限セットグループ** を選択します。
+2. **CodeBuilderGroup** をクリックします。
+3. **Manage Assignments (割り当ての管理)** をクリックします。
+4. **Add Assignments (割り当てを追加)** をクリックします。
+5. 権限セットグループを割り当てるユーザの名前の隣のチェックボックスをチェックし、**Next (次へ)** をクリックします。
+6. **Assign (割り当て)** をクリックします。
 
-**Note**: This procedure generates an email inviting the new users into the org. But until you’re finished setting up Code Builder, there’s not much for them to do in the org. We recommend that you let your team know that you’re setting up Code Builder and to wait until they hear from you before logging in.
+これでユーザはアプリケーションランチャーから **Code Builder** を起動できるようになります。
 
-## Assign Permissions
+## コードビルダーを最新バージョンにアップグレードする
 
-As an admin, assign user permissions:
+ほとんどの場合、コードビルダーの最新バージョンにアップグレードする作業は不要です。新しいパッケージバージョンがリリースされると、組織が自動的に更新されます。
 
-1. From Setup, enter `Permission Set Groups` in the Quick Find box, then select **Permission Set Groups**.
-2. Click **CodeBuilderGroup**.
-3. Click **Manage Assignments**
-4. Click **Add Assignments**.
-5. Select the checkboxes next to the names of the users to assign the permission set group, and click **Next**.
-6. Click **Assign**.
+ただし、転送アップグレードが機能しなくなる場合があります。最新バージョンがない場合は、コードビルダーの設定ページからパッケージを手動でインストールすることをお勧めします。新しいバージョンが存在しない場合、パッケージインストーラーによって、最新バージョンがすでにあることが通知されます。
 
-Your users can now go to the App Launcher and launch **Code Builder**.
-
-## Upgrade to the Latest Code Builder Version
-
-In most cases, you don’t have to do anything to upgrade to the latest version of the Code Builder. When we release a new package version, we update your org automatically.
-
-However, sometimes the push upgrade doesn’t work. If you don’t have the latest version, we recommend that you manually install the package through the Code Builder Setup page. If a newer version doesn’t exist, the package installer informs you that you already have the latest version.
-
-## See Also
+## その他のリソース
 
 [Installing Packages](https://developer.salesforce.com/docs/atlas.en-us.appExchangeInstallGuide.meta/appExchangeInstallGuide/appexchange_install_installation.htm)
 
-[Assign a Permission Set to Multiple Users](https://help.salesforce.com/s/articleView?id=sf.perm_sets_mass_assign.htm&type=5)
+[権限セットの割り当ての管理](https://help.salesforce.com/s/articleView?id=sf.perm_sets_manage_assignments.htm&type=5&language=ja)
 
-[View and Manage Users](https://help.salesforce.com/s/articleView?id=sf.admin_users.htm&type=5)
-[Standard Profiles](https://help.salesforce.com/s/articleView?id=sf.standard_profiles.htm&type=5)
-[User Licenses](https://help.salesforce.com/s/articleView?id=sf.users_understanding_license_types.htm&type=5)
+[ユーザーの表示および管理](https://help.salesforce.com/s/articleView?id=sf.admin_users.htm&type=5&language=ja)
+[標準プロファイル](https://help.salesforce.com/s/articleView?language=ja&id=sf.standard_profiles.htm&type=5)
+[ユーザーライセンス](https://help.salesforce.com/s/articleView?language=ja&id=sf.users_understanding_license_types.htm&type=5)

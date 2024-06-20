@@ -17,6 +17,20 @@ LWC テストサイドバーは、書いたコードのテストを実行する�
 
 テスト結果をクリアするには、サイドバー上部の更新アイコンをクリックします。 (ホバーテキスト: SFDX: Lightning Web Component テストエクスプローラを更新)
 
+## Jest テストのデバッグ構成を追加する
+
+Jest テストのデバッグ構成を追加して、`launch.json` を自動的に更新します。前提条件として、[node.js](https://nodejs.org/) と [npm](https://www.npmjs.com/get-npm) がインストールされている必要があります。
+
+> **_注_** 空のプロジェクトから開始する場合、まず [sfdx-lwc-jest](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.unit_testing_using_jest_installation) をインストールし、説明されている手順に従ってテスト設定を追加します。
+
+以下の手順で Jest テスト構成を追加します。
+
+1. アクティビティバーから、**実行とデバッグ**に移動します。
+2. ドロップダウンリストから、**構成の追加...**を選択します。
+3. **Debug: LWC Jest Tests** を選択します。
+4. 更新された `launch.json` を 保存します。
+5. 構成のドロップダウンから、**Debug: LWC Jest Tests** を選択し、デバッグを開始します。
+
 ## ファイル内から Jest テストを実行、デバッグ、監視する
 
 ファイル内のコンテキストアクション、またはエディタウィンドウの右上隅にあるメニューバーからボタンをクリックすることで、Jest ユニットテストを実行またはデバッグすることができます。ターミナルパネルでテスト結果を表示します。

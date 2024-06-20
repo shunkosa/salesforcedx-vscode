@@ -25,6 +25,7 @@ Prettier Apex プラグインをインストールするには、以下の手順
 
 ```json
 {
+  "plugins": ["prettier-plugin-apex"],
   "trailingComma": "none",
   "overrides": [
     {

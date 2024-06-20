@@ -1,12 +1,12 @@
 ---
-title: Overview
+title: 概要
 lang: ja
 ---
 
-Visual Studio Code is a powerful source code editor that, along with the Salesforce Extension Pack, gives you a comprehensive infrastructure for Salesforce development.
+Visual Studio Code は、Salesforce 拡張機能パックと組み合わせることで、Salesforce 開発のための包括的なインフラストラクチャを提供する強力なソースコードエディタです。
 
-We recommend that you learn more about available features in Visual Studio Code by visiting the Visual Studio Code [documentation](https://code.visualstudio.com/docs). Then come back here to learn about the features specific to Salesforce development. You’ll see that features like the Org Browser, and easy access to commands via the command palette makes Salesforce development a breeze!
+Visual Studio Code の [ドキュメント](https://code.visualstudio.com/docs) にアクセスして、Visual Studio Code で利用可能な機能について詳しく学習することをお勧めします。その後、ここに戻って、Salesforce 開発に固有の機能について学習してください。組織ブラウザなどの機能や、コマンドパレットを介したコマンドへの簡単なアクセスにより、Salesforce 開発が簡単になります！
 
-## See Also
+## 参照
 
-Trailhead: [Visual Studio Code for Salesforce Development](https://trailhead.salesforce.com/content/learn/projects/quickstart-vscode-salesforce)
+Trailhead: [クイックスタート: Salesforce 開発のための Visual Studio Code](https://trailhead.salesforce.com/ja/content/learn/projects/quickstart-vscode-salesforce)

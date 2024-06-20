@@ -1,22 +1,23 @@
 ---
-title: Code Builder Overview
-lang: en
+title: コードビルダーの概要
+lang: ja
 ---
 
-## Overview
+## 概要
 
-Salesforce Code Builder is a web-based integrated development environment that has all the power and flexibility of Visual Studio Code, Salesforce Extensions for VS Code, and Salesforce CLI in your web browser. Code Builder provides a modern developer experience for all developers, regardless of expertise level. Code Builder makes it easy for admins and developers alike to work in the cloud without having to worry about downloading software, setup or your machine specs. With Code Builder, you can work from anywhere. Bookmark your development environment to return to it, or access the link from a different machine. Unlike a desktop IDE, Code Builder saves your work for you without you explicitly having to do so.
+Salesforce コードビルダーは、Web ブラウザで Visual Studio Code、VS Code 向け Salesforce 拡張機能、Salesforce CLI のすべての機能と柔軟性を備えた Web ベースの統合開発環境です。コードビルダーは、専門知識レベルに関係なく、すべての開発者に最新の開発者エクスペリエンスを提供します。コードビルダーを使用すると、システム管理者も開発者も、ソフトウェアのダウンロードや設定、マシンの性能について心配することなく、クラウドで簡単に作業できるようになります。コードビルダーを使用すると、どこからでも作業できます。開発環境をブックマークしてその環境に戻るか、別のマシンからリンクにアクセスします。デスクトップ IDE とは異なり、コードビルダーはユーザーが明示的に保存しなくても、作業内容を保存します。
 
-Code Builder is development environment that can be spun up quickly, and is custom to your Salesforce org and your specified project. Through Code Builder, access your favorite Salesforce languages and frameworks, such as Apex, SOQL, Visualforce, Aura, and Lightning Web Components. Access rich developer tools such as debuggers for Apex, linting, and so on.
-You can install Code Builder as a managed package in any supported Salesforce org edition.
+コードビルダーは、すぐに起動できる開発環境であり、Salesforce 組織および指定したプロジェクトに合わせてカスタマイズされます。コードビルダーを通じて、Apex、SOQL、Visualforce、Aura、Lightning Web コンポーネントなどのお気に入りの Salesforce 言語およびフレームワークにアクセスします。Apex のデバッガや lint などの豊富な開発者ツールにアクセスします。
+
+コードビルダーは、サポートされている Salesforce エディションの管理パッケージとしてインストールできます。
 
 ![Code Builder Welcome Page](./images/codebuilder_welcome.png)
 
-## Additional Resources
+## 追加のリソース
 
 - Trailhead: [Code Builder Quick Look](https://trailhead.salesforce.com/content/learn/modules/code-builder-quick-look)
 - Trailblazer Community: [Code Builder Community Group](https://trailhead.salesforce.com/trailblazer-community/groups/0F94S000000kJcFSAU?tab=discussion&sort=LAST_MODIFIED_DATE_DESC)
 
-## Bugs and Feedback
+## バグとフィードバック
 
-If you encounter any issues using Code Builder, or want to provide other types of feedback, such as initial impressions or feature requests, [file an issue](https://github.com/forcedotcom/try-code-builder-feedback/issues) in the GitHub repo. We want to understand what features and enhancements are important to you.
+コードビルダーを使用していて何か問題が発生した場合、または最初の印象や機能リクエストなど、その他のフィードバックを提供したい場合は、GitHub リポジトリに [Issue を作成](https://github.com/forcedotcom/try-code-builder-feedback/issues)してください。どのような機能や改善があなたにとって重要なのかを理解したいと考えています。

@@ -1,5 +1,5 @@
 ---
-title: Salesforce Extensions for Visual Studio Code
+title: Visual Studio Code 向け Salesforce 拡張機能
 lang: ja
 permalink: /ja/
 ---

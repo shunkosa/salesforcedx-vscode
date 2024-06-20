@@ -1,45 +1,45 @@
 ---
-title: Remove Code Builder
-lang: en
+title: コードビルダーのアンインストール
+lang: ja
 ---
 
-## Uninstall Code Builder
+## コードビルダーのアンインストール
 
-You can uninstall Code Builder, if necessary. If you plan to reinstall Code Builder, don't delete the Code Builder auth providers. However, if you deleted the auth providers, you can recreate them by re-enabling the Code Builder preference in Setup.
+必要であればコードビルダーをアンインストールすることができます。コードビルダーを再インストールする予定があれば、コードビルダーの認証プロバイダは削除しないでください。しかし、もし認証プロバイダを削除しても、設定でコードビルダーを再有効化すれば再作成することができます。
 
-**Important**: Uninstalling Code Builder also removes all associated data including, but not limited to, projects and activity history.
+**重要**: コードビルダーをアンインストールすると、プロジェクトやアクティビティ履歴など、関連するすべてのデータも削除されます。
 
-### Remove Permission Set Assignments
+### 権限セット割り当てを取り除く
 
-Before you uninstall the Code Builder package, remove permission set assignments, then delete Code Builder permissions sets.
+コードビルダーのパッケージをアンインストールする前に、権限セットの割り当てを削除し、コードビルダーの権限セットを削除します。
 
-First, remove the Code Builder permission set group assignments from all Code Builder users.
+初めに、すべてのコードビルダーユーザーから権限セットグループの割り当てを削除します。
 
 - CodeBuilderGroup
 
-Next, delete the Code Builder permission sets.
+次に、コードビルダーの権限セットを削除します。
 
-From Setup, enter `Permission Sets` in the Quick Find box, then select **Permission Sets**.
-Delete the `Code Builder Package` permission set.
+設定から、クイック検索ボックスに `権限セット` と入力し、**権限セット**を選択します。
+`Code Builder Package` の権限セットを削除します。
 
-### Uninstall the Code Builder Package
+### コードビルダーパッケージのアンインストール
 
-After you remove the permission set and permission set assignments, you can uninstall the Code Builder package, which removes the application and all its associated data and objects.
+権限セットと権限セットの割り当てを削除すると、コードビルダーのパッケージをアンインストールできるようになり、アプリケーションと関連するデータやオブジェクトが削除されます。
 
-Before you uninstall the package:
+パッケージをアンインストールする前に以下を行なってください。
 
-- Remove Code Builder permission Set assignments.
-- Delete Code Builder permission sets.
+- コードビルダーの権限セット割り当てを削除する。
+- コードビルダーの権限セットを削除する。
 
-1. From Setup, enter `Installed Packages` in the Quick Find box, then select **Installed Packages**.
-2. Click **Uninstall**, then scroll to the bottom of the page to choose whether to save and export a copy of the package’s data.
-3. Select **Yes, I want to uninstall this package and permanently delete all associated components**.
-4. Click **Uninstall**.
+1. 設定から、クイック検索ボックスに、`インストール済みパッケージ` と入力し、**インストール済パッケージ**を選択します。
+2. **アンインストール**をクリックし、ページの下部までスクロールし、パッケージのデータのコピーをパッケージのデータのコピーを保存してエクスポートするかどうかを選択します。
+3. **はい。このパッケージをアンインストールして、すべての関連コンポーネントを永久に削除します** を選択します。
+4. **アンインストール** をクリックします。
 
-### Disable Code Builder Preference
+### コードビルダー設定の無効化
 
-When Code Builder was installed, a Salesforce admin first enabled Code Builder. To ensure that Code Builder can’t be installed or used, you can disable the Code Builder preference.
+コードビルダーがインストールした際、Salesforce 管理者がまずコードビルダーを有効にしています。コードビルダーをインストールまたは使用できないようにするには、コードビルダー設定を無効にします。
 
-From Setup, enter `Code Builder` in the Quick Find box, then select **Code Builder**.
-Disable **Enable Code Builder**.
-You no longer can install or upgrade the Code Builder app and users see Code Builder has not been enabled for your org when they try to use it.
+設定から、クイック検索ボックスに `コードビルダー` と入力し、**コードビルダー**を選択します。
+**コードビルダーを有効化**のトグルを無効化に切り替えます。
+コードビルダーアプリケーションをインストールまたはアップグレードできなくなり、ユーザーが使用しようとすると、組織でコードビルダーが有効になっていないと表示されるようになります。

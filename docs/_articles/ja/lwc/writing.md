@@ -16,11 +16,11 @@ Lightning Web コンポーネント拡張機能では、エディタに内蔵さ
 
 Lightning Web コンポーネント拡張機能は、VS Code の [HTML](https://code.visualstudio.com/docs/languages/html) と [JavaScript](https://code.visualstudio.com/docs/languages/javascript) の言語機能をベースに、シンタックスハイライト、ブラケットマッチング、IntelliSense による言語固有のコード補完などを実現しています。この拡張機能は、以下の Lightning Web コンポーネントリソースのコード補完を提供します。
 
-## Code Snippets
+## コードスニペット
 
-Code snippets are available for scaffolding class and interface definitions, and a variety of statements such as loops and conditional statements, and so on. When you’re working in an LWC HTML file, run `Insert Snippet` from the Command Palette to view the available snippets. You can also view these code snippets as code completion suggestions by typing the component name (e.g., `accordion`).
+コードスニペットは、クラスとインターフェースの定義のスキャフォールディング、およびループや条件文などのさまざまなステートメントに使用できます。LWC HTML ファイルで作業している場合は、コマンドパレットから `スニペットの挿入` を実行して、使用可能なスニペットを表示します。また、コンポーネント名 (例: `accordion`) を入力して、これらのコードスニペットをコード補完の候補として表示することもできます。
 
-Out of the box snippets for Salesforce development are available in these repositories:
+Salesforce 開発用のすぐに使用できるスニペットは、次のリポジトリから使用できます。
 
 - [Apex Code Snippets](https://github.com/forcedotcom/salesforcedx-vscode/blob/develop/packages/salesforcedx-vscode-apex/snippets/apex.json)
 - [HTML Code Snippets for LWC development](https://github.com/forcedotcom/salesforcedx-vscode/blob/develop/packages/salesforcedx-vscode-lwc/snippets/lwc-html.json)
@@ -53,6 +53,8 @@ Lightning コンポーネントでは scoped modules を通して Salesforce の
 
 VS Code は、`lightning/uiObjectInfoApi` や `lightning/uiRecordApi` のような Lightning API リソースに対してもコード補完を提供します。詳細は、『Lightning Web コンポーネント開発者ガイド』に記載されている、[「`lightning/ui*Api` ワイヤアダプタと関数」](https://developer.salesforce.com/docs/component-library/documentation/ja-jp/lwc/lwc.reference_ui_api)を参照してください。
 
+![Lightning UI の補完](./images/vscode_lwc_lightningui.png)
+
 ### Lightning Web コンポーネントの構文
 
 VS Code は Lightning Web コンポーネントフレームワークが備えるリアクティブプロパティやワイヤサービスを補完します。詳細は、『Lightning Web コンポーネント開発者ガイド』に記載されている、[「リアクティビティ」](https://developer.salesforce.com/docs/component-library/documentation/ja-jp/50.0/lwc/lwc.reactivity) および[「ワイヤサービスを使用したデータの取得」](https://developer.salesforce.com/docs/component-library/documentation/ja-jp/lwc/lwc.data_wire_service)を参照してください。
@@ -78,6 +80,8 @@ VS Code は Lightning Web コンポーネントフレームワークが備える
 編集中のコードが不正な形式であったり、疑わしい場合にエラーを表示します。VS Code は、Salesforce の ESLint ルールを適用します。ESLint を有効にするには、コマンドラインからインストールします。手順については、[Lightning Web Components ESLint Plugin](https://github.com/salesforce/eslint-plugin-lwc) および [Lightning Web Components ESLint Config](https://github.com/salesforce/eslint-config-lwc) のリポジトリを参照してください。
 
 以下の例では、`onpress` にカーソルを置いたとき、API プロパティには "on" で始まる名前を使用できないとリンターがレポートしています。
+
+![ホバー時の Linter 例](./images/vscode_lwc_linting_press.png)
 
 ### 問題の表示とクイックフィックス
 

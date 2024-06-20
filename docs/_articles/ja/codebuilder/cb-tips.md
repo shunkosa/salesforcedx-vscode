@@ -1,12 +1,12 @@
 ---
-title: Useful Tips for Using Code Builder
-lang: en
+title: コードビルダーを使用する際の便利なヒント
+lang: ja
 ---
 
-## Install Extensions from Open VSX Registry
+## Open VSX レジストリから拡張機能をインストールする
 
-Maximize your productivity in Code Builder by installing additional extensions to your Code Builder environment. [Open VSX](https://open-vsx.org) is an Eclipse open-source project and alternative to the Visual Studio Marketplace. Extensions available here can be installed in Code Builder. You can browse and install these extensions from within VS Code. Bring up the Extensions view by clicking on the Extensions icon in the Activity Bar or the **View: Extensions** command (⇧⌘X).
+コードビルダー環境に追加の拡張機能をインストールすることでコードビルダーの生産性を最大化します。[Open VSX](https://open-vsx.org) は Eclipse のオープンソースプロジェクトで Visual Studio Marketplace の代替です。ここで利用可能な拡張機能はコードビルダーにインストールすることができます。VS Code 内からこれらの拡張機能を検索しインストールすることができます。アクティビティバーの拡張機能アイコンをクリックするか **表示: 拡張機能を表示**コマンド(⇧⌘X)を使用して拡張機能ビューを表示します。
 
-## Reset your Code Builder Environment
+## コードビルダー環境をリセットする
 
-Reset your Code Builder environment to start building with a fresh environment. Resetting deletes everything stored in your Code Builder environment and all your data so you have a clean space to work with. To reset your Code Builder environment, click the dropdown next to the launch button and select **Reset Environment**.
+コードビルダー環境をリセットすると、新しい環境で構築を開始できます。リセットすると、コードビルダー環境に保存されているすべての内容とすべてのデータが削除され、クリーンな環境で作業できるようになります。コードビルダー環境をリセットするには、起動ボタンの横にあるドロップダウンをクリックし、[**Reset Environment (環境をリセット)**] を選択します。

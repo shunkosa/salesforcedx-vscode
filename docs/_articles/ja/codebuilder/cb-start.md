@@ -1,126 +1,128 @@
 ---
-title: Get Started with Code Builder
-lang: en
+title: コードビルダーの使用開始
+lang: ja
 ---
 
-## Overview
+## 概要
 
-Complete this Quick Start to become familiar with the Code Builder interface and perform some simple tasks in your Code Builder environment. Before you start, see [Code Builder Overview](./en/codebuilder/about) for more information and important considerations.
+このクイックスタートを完了して、コードビルダーのインターフェイスに慣れ、コードビルダー環境でいくつかの簡単なタスクを実行します。開始する前に、[コードビルダーの概要](./ja/codebuilder/about)で詳細情報と重要な考慮事項を確認してください。
 
-### Don’t Forget to Save Your Work
+### 作業を保存することを忘れないようにする
 
-Working in the cloud has its advantages. However, unlike working on a desktop where you save your files to a local machine, you must either deploy your changes to your org or commit them to source control to save your work somewhere permanent. Work saved in your Code Builder environment will be there when you return, but Code Builder is not suited for permanent-long-term storage. We recommend saving your work before you close the Code Builder tab.
+クラウド上で作業することには利点があります。しかし、ローカルマシンにファイルを保存するデスクトップ上での作業と異なり、作業を永続的に保存するには、変更を組織にデプロイするか、ソース管理にコミットする必要があります。コードビルダー環境に保存された作業は戻ったときにそこにありますが、コードビルダーは永続的な長期保存には適していません。コードビルダーのブラウザタブを閉じる前に作業を保存することをお勧めします。
 
-**Note**:  We may delete your Code Builder environment if its been inactive for longer than 60 days. 
+**注**: コードビルダー環境が 60 日間以上非アクティブになっている場合、その環境は削除されることがあります。
 
-## Create Your Code Builder Environment
+## コードビルダー環境を作成する
 
-1. From the App Launcher, find and open **Code Builder Dashboard**.
+1. アプリケーションランチャーから、**コードビルダーダッシュボード** を開きます。
 
-**Note:** If you don't see Code Builder Dashboard as an option, contact your admin to make sure you have the correct license and permission set assigned to you.
+**注:** コードビルダーダッシュボードが表示されない場合、システム管理者に連絡して、適切なライセンスと権限セットが割り当てられているか確認してください。
 
-2. Click **Launch** to launch your Code Builder environment. A new environment is created for you the first time to launch. We've also created an empty Salesforce DX project to help you get started. Note that it takes a few minutes for a new environment to be created and loaded. You know everything is ready when you see “Welcome to Salesforce Code Builder”.
+2. **Launch (起動)** をクリックすると、コードビルダー環境が起動します。初めて起動するときには、新しい環境が作成されます。作業を開始できるように空の Salesforce DX プロジェクトも作成されます。新しい環境が作成されて読み込まれるまでには数分かかることに注意してください。“Welcome to Salesforce Code Builder (Salesforce コードビルダーへようこそ)” と表示されたら、すべての準備が整った状態です。
 
-![Code Builder Dashboard](./images/cb_dashboard.png)
+![コードビルダーダッシュボード](./images/cb_dashboard.png)
 
-**Tip**: Once you have created your Code Builder environment, launch it from the dashboard at any time, or bookmark it for fast access.
+**ヒント**: コードビルダー環境を一度作成したら、いつでもダッシュボードから起動したり、ブックマークしてすばやくアクセスしたりできます。
 
-**Note**: The `.bashrc`,`.profile` and `.bash_logout` files are overwritten every time you launch your Code Builder enviroment. We recommend that you do not edit these files because your changes will be lost. Create new `.bashrc.local`,`.profile.local` and `.bash_logout.local` files to store your Dotfile customizations.
+**注**: `.bashrc`、`.profile`、および `.bash_logout` ファイルはコードビルダー環境を起動する度に上書きされます。これらのファイルの変更は失われるため、編集しないことをお勧めします。代わりに、新しく `.bashrc.local`、`.profile.local`、および `.bash_logout.local` ファイルを使用して、Dotfile の設定を行なってください。
 
-## Connect to a Salesforce Org
+## Salesforce 組織に接続する
 
-Next, connect an org to your Code Builder environment. During the course of development, you'll use different types of orgs for different stages. For example, it's common to use a Developer sandbox or Developer Edition org during the development phase, and move to other sandbox types for integration, testing, and staging. Eventually, you'll deploy your changes to a production org. You can connect Code Builder to any of these orgs to deploy or retrieve metadata.
+次に、コードビルダー環境を組織に接続します。開発の途中で、異なるフェーズ毎に異なる種類の組織に接続することがあります。例えば、開発フェーズでは Developer Sandbox や Developer エディション組織に接続し、インテグレーション、テスト、ステージングのために他の Sandbox 種別に移動し、最後に、本番環境に変更をデプロイすることは一般的なユースケースです。コードビルダーではこれらのどの組織にも接続して、メタデータをデプロイまたは取得できます。
 
-To connect to an org the first time you launch Code Builder:
+コードビルダーを初めて起動するときに組織に接続する手順は次の通りです。
 
-1. In your Code Builder environment, click **Connect an Org** to connect to the Salesforce org you want to work in.
-2. Enter the login URL or select the org you want to log into.
-3. Enter an alias for the org, for example, dev_pro_sandbox or my_playground.
-4. A code is displayed in a text box. Click **Connect**.
-5. Log in with the relevant username and password. Click **Allow**.
-6. Click **Continue**. You’re now connected to an org, and its name is visible in the status bar at the bottom in the Code Builder tab.
+1. コードビルダー環境で **Connect an Org (組織に接続)** をクリックして、作業したい Salesforce 組織に接続します。
+2. ログイン URL を入力するか、ログインしたい組織を選択します。
+3. 組織の別名を入力します。例えば、 dev_pro_sandbox や my_playground です。
+4. テキストボックスにコードが表示されます。**Connect (接続)** をクリックします。
+5. ユーザ名とパスワードを入力しログインします。**許可**をクリックします。
+6. **続ける**をクリックします。これで組織に接続しました。コードビルダーのタブの下部にあるステータスバーに名前が表示されます。
 
-You can change the org you are connected to by clicking on the name of the current org to bring up the Command Palette and run **SFDX: Authorize an Org** again.
+現在の組織の名前をクリックし、コマンドパレットを呼び出し **SFDX: Authorize an Org (SFDX: 組織に接続)** を実行することで、接続する組織を変更することができます。
 
-**Note**: After you authorize an org, we take care of future authorizations so you don't have to continually log in. Just click the org’s name and then choose the org from the list.
+**注**: 組織を認証すると、その後の認証はコードビルダー側で処理されるため、継続的にログインし直す必要はありません。組織の名前をクリックし、リストから組織を選択するだけです。
 
-## Let's Take A Quick Tour
+## クイックツアーを開始する
 
-You’re now in your developer environment in Code Builder. Code Builder has a rich IDE and it gives you access to cool Salesforce-specific development tools through the expanded Salesforce Extension pack. Let’s take a quick tour and get to know the lay of the land. Your screen looks something like this:
+これで、コードビルダーの開発環境に入りました。コードビルダーには豊富な IDE があり、拡張された Salesforce 拡張機能パックを通じて、Salesforce 固有の優れた開発ツールにアクセスできます。クイックツアーを行って、状況を把握しましょう。画面は次のようになります。
 
 ![code_builder_ui](./images/code_builder_ga_ui_dark.jpg)
 
-The Code Builder user interface is divided into five main areas.
+コードビルダーのユーザーインターフェースは 5 つのエリアに分けられます。
 
-**Activity Bar**: Located on the left-hand side, it contains iconic buttons to switch between different views. In our example, the Explorer view is active.
+**Activity Bar (アクティビティバー)**: 左側に位置し、さまざまなビューを切り替えるためのアイコンボタンがあります。この例では、エクスプローラービューがアクティブになっています。
 
-**Side Bar**: Contains different views to assist you while working on your project. For example, you can see the Explorer view in our example. It lists the files in DX project structure in your project.
+**Side Bar (サイドバー)**: プロジェクトでの作業を支援するさまざまなビューが含まれています。たとえば、この例ではエクスプローラービューが表示されています。プロジェクト内の DX プロジェクト構造内のファイルが一覧表示されます。
 
-**Editors**: The main areas to edit your files. You can open as many editors as you like side by side, vertically and horizontally.
+**Editor (エディター)**: ファイルを編集するメインのエリアです。縦や横に並べて、好きなだけエディターを開くことができます。
 
-**Panel**: Shows output or debug information, errors and warnings, or an integrated terminal. You can choose the output to display.
+**Panel (パネル)**: 出力やデバッグの情報、エラーと警告、統合されたターミナルを表示します。表示する出力を選択できます。
 
-**Status Bar**: Shows information about the opened project and the files you’re editing. The Status Bar displays the org that you're connected to.
+**Status Bar (ステータスバー)**: 開いているプロジェクトや編集しているファイルに関する情報を表示しいます。ステータスバーには接続している組織が表示されます。
 
-## Get To Know Your Org – Use the Org Browser
+## 組織について知る - 組織ブラウザを使用する
 
-Take a closer look at the activity bar and notice a cloud icon. This icon represents the Org Browser. It’s a part of the Salesforce Extension pack. It helps you browse and retrieve metadata from your org without having to use a manifest file. Use Org Browser to retrieve the metadata source into your local project.
+アクティビティバーをよく見ると、雲の形のアイコンがあります。このアイコンは組織ブラウザを表しています。これは Salesforce 拡張機能パックの一部です。組織ブラウザを使用すると、マニフェストファイルを使用せずに組織からメタデータを参照および取得できます。組織ブラウザを使用して、メタデータのソースをローカルのプロジェクトに取得します。
 
-**More Information**: You can find more information about the [Org Browser](https://developer.salesforce.com/tools/vscode/en/user-guide/org-browser) in the Salesforce Extension Pack documentation.
+**詳細**: [組織ブラウザ](https://developer.salesforce.com/tools/vscode/en/user-guide/org-browser)についての詳細は Salesforce 拡張機能パックのドキュメントを参照してください。
 
 ![org_browser_small](./images/org_browser_small.jpg)
 
-Click Org Browser and scroll down to **Custom Objects**. The first object you see is Account. You can view the metadata of the **Account** object (and do a few more cool things, but we’ll get to those in a bit).
+組織ブラウザをクリックして **Custom Objects** までスクロールします。最初に見えるオブジェクトは Account (取引先) です。**Account (取引先)** オブジェクトのメタデータを表示することができます。and do a few more cool things, but we’ll get to those in a bit.
 
-## Use SOQL Builder to Build and Run your First Query
+## SOQL ビルダーを使用して最初のクエリを構築し実行する
 
 Code Builder comes preloaded with everything you need to build and run a SOQL query.
 Let’s build and run a simple SOQL query on the Account object:
 
-1. Press Ctrl+Shift+P (⇧⌘P) to view the Command Palette.
-2. Type “SOQL” in the search box and then select **SFDX: Create Query in SOQL Builder**.
-3. Select the following:
+コードビルダーには、SOQL クエリを構築して実行するために必要なものがすべてあらかじめロードされています。取引先オブジェクトで簡単な SOQL クエリを構築して実行してみましょう。
 
-   a. **Account** Object in **From** field.
+1. Ctrl+Shift+P (⇧⌘P) キーを押して、コマンドパレットを表示します。
+2. 検索ボックスに “SOQL” と入力し、**SFDX: Create Query in SOQL Builder (SFDX: SOQL ビルダーでクエリを作成)** を選択します。
+3. 次の通り選択します。
 
-   b. **BillingState** and **NumberofEmployees** in **Fields**.
+   a. **From** で**Account** オブジェクト
 
-   c. Press **Run Query** to run this simple SOQL Query on your org.
+   b. **Fields** で **BillingState (請求先住所)** と **NumberofEmployees (従業員数)**
 
-You’re prompted to save your changes if you close the untitled file.
+   c. **Run Query** を実行し、組織でシンプルな SOQL を実行します。
 
-5. Save the changes to a file using a “.soql” extension.
-6. Let’s rerun the saved query – Right-click the file and select **Open With…** then select SOQL Builder.
-   The file opens in SOQL Builder and you can rerun or edit the query as you wish.
+無題のファイルを閉じると、変更を保存するように求められます。
 
-For more information on building complex queries see the [SOQL Builder](https://developer.salesforce.com/tools/vscode/en/soql/soql-builder) in the Salesforce Extensions for Visual Studio Code documentation.
+5. 変更を、“.soql” の拡張子のファイルで保存します。
+6. 保存したクエリを再実行しましょう。ファイルを右クリックし、**ファイルを開くアプリケーションの選択…**を選択し、SOQL ビルダーを選択します。
+   ファイルが SOQL ビルダーで開き、必要に応じてクエリを再実行または編集できます。
 
-## Create, Retrieve, and Deploy a Custom Field
+より複雑なクエリを構築するには、VS Code 向け Salesforce 拡張機能のドキュメントの [SOQL Builder](https://developer.salesforce.com/tools/vscode/ja/soql/soql-builder) を参照してください。
 
-Let’s add a custom field to an object in our org and pull its metadata into our Code Builder project.
+## カスタム項目を作成、取得、デプロイする
 
-First let’s add a custom field –
+組織内のオブジェクトにカスタム項目を作成して、コードビルダーのプロジェクトにそのメタデータをプルしましょう。
 
-1. From **Setup**, go to **Object Manager** and select **Account**.
-2. Click **Fields & Relationships**.
-3. Click **New**.
-4. For data type, select **Date**, then click **Next**.
-5. Fill out the following:
-   - Field Label: Created On
-   - Field Name: createdon
-   - Description: Date of Account Creation
-6. Click **Next** until you save the field.
+最初にカスタム項目を作成しましょう。
 
-Now let’s retrieve metadata for this new field –
+1. **設定**から、**オブジェクトマネージャー**に移動し、**取引先**を選択します。
+2. **項目とリレーション**を選択します。
+3. **新規**をクリックします。
+4. データ型で**日付**を選択し、**次へ**をクリックします。
+5. 以下の通り埋めます。
+   - 項目の表示ラベル: Created On
+   - 一意の名前: createdon
+   - 説明: Date of Account Creation
+6. 項目が保存されるまで**次へ**をクリックします。
 
-1. Return to Code Builder and open Org Browser.
-2. Scroll down to **Custom Objects** and navigate to **Account**.
-3. Click the retrieve icon next to the Account component to run **SFDX: Retrieve Source from Org**.
-4. From the Activity Bar, click the Explorer and navigate to `force-app/main/default/object/Account`.
+新しい項目のメタデータを取得しましょう。
 
-Lo and behold, in the `fields` folder, a file named `createdon_c.field-meta.xml` contains metadata for your new custom field!
+1. コードビルダーに戻り組織ブラウザを開きます。
+2. **Custom Objects** までスクロールし、**Account** を特定します。
+3. Account コンポーネントの隣の取得アイコンをクリックすると、**SFDX: Retrieve Source from Org** が実行されます。
+4. アクティビティバーから、エクスプローラーをクリックし `force-app/main/default/object/Account` を開きます。
 
-The metadata is here for your reference:
+`fields` フォルダの、`createdon_c.field-meta.xml` という名前のファイルに、新しいカスタム項目のメタデータが含まれていることが分かります！
+
+参考までに取得されるメタデータは次の通りです。
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -135,28 +137,28 @@ The metadata is here for your reference:
 </CustomField>
 ```
 
-We’ll now make a simple edit to this field and deploy our changes back to our org with a single click.
+ここで、この項目に簡単な編集を加え、1 回のクリックで変更を組織にデプロイします。
 
-1. Edit `createdon_c.field-meta.xml` and change the `<required>` tag value to `true` to indicate that this custom field is required.
-2. Right-click the `objects/Account` folder and click **SFDX: Deploy Source to Org**.
-3. After the command has successfully run, go back to your org and check the details of the **Created On** custom field and confirm that it’s now a required field.
+1. `createdon_c.field-meta.xml` を編集し、この項目を必須項目にするため、`<required>` タグの値を `true` に変更します。
+2. `objects/Account` フォルダを右クリックし、**SFDX: Deploy Source to Org (ソースを組織にデプロイ)** をクリックします。
+3. コマンドが正常に実行されたら、組織に戻り、**Created On** カスタム項目の詳細を確認し、項目が必須項目になっていることを確認します。
 
-## Create and Deploy a New Lightning Web Component
+## 新しい Lightning Web コンポーネントを作成しデプロイする
 
-For another exercise in deploying, let’s learn how to quickly create a simple Lightning Web Component in our Code Builder project. We’ll then deploy this component to our org using a single command. Here we go:
+デプロイのもう 1 つのエクササイズとして、コードビルダーのプロジェクトでシンプルな Lightning Web コンポーネントをすばやく作成する方法を学びましょう。次に、1 つのコマンドを使用してこのコンポーネントを組織にデプロイします。では、始めましょう。
 
-Let’s create a Lightning Web Component –
+新しい Lightning Web コンポーネントを作成する手順は次の通りです。
 
-1. Press Ctrl+Shift+P (⇧⌘P) run **SFDX: Create Lightning Web Component** to create a New Lightning Web Component.
-2. Give the component a name, say, `newCBComponent`.
-3. Press **Enter** to accept the default file location (`force-app/main/default/lwc`).
-4. Press **Enter**.
+1. Ctrl+Shift+P (⇧⌘P) を押し、**SFDX: Create Lightning Web Component** から新しい Lightning Web コンポーネントを作成します。
+2. ここでは、コンポーネント名に `newCBComponent` と入力します。
+3. **Enter** キーを押し、デフォルトのファイル位置を受け入れます。 (`force-app/main/default/lwc`).
+4. **Enter** キーを押します。
 
-Three new files are created in the `force-app/main/default/lwc/newCBComponent` folder.
+`force-app/main/default/lwc/newCBComponent` フォルダに 3 つの新しいファイルが作成されます。
 
-Update the files –
+ファイルを次の通り更新します。
 
-In `newCBComponent.html`, copy and paste the following code:
+`newCBComponent.html` の内容を、次のコードをコピーアンドペーストして置き換えます。
 
 ```
 <template>
@@ -165,7 +167,7 @@ In `newCBComponent.html`, copy and paste the following code:
 </template>
 ```
 
-In `newCBComponent.js`, copy, and paste the following code:
+`newCBComponent.js` の内容を、次のコードをコピーアンドペーストして置き換えます。
 
 ```
 import { LightningElement } from 'lwc';
@@ -179,7 +181,7 @@ export default class NewCBComponent extends LightningElement {
 
 ```
 
-In `newCBComponent.js-meta.xml`, copy and paste the following code:
+`newCBComponent.js-meta.xml` の内容を、次のコードをコピーアンドペーストして置き換えます。
 
 <!-- prettier-ignore -->
 ```html
@@ -197,13 +199,13 @@ In `newCBComponent.js-meta.xml`, copy and paste the following code:
 
 ```
 
-Save all the files.
+すべてのファイルを保存します。
 
-Let’s deploy this new component to our org –
+このコンポーネントを組織にデプロイしましょう。
 
-Right-click the `force-app/main/default/lwc/newCBComponent` folder and click **SFDX: Deploy Source to Org**.
+`force-app/main/default/lwc/newCBComponent` フォルダを右クリックして、**SFDX: Deploy Source to Org (SFDX: 組織にソースをデプロイ)** をクリックします。
 
-Your output window shows this message:
+出力ウィンドウに次のメッセージが表示されます。
 
 ```
 
@@ -218,14 +220,14 @@ Created  newCBComponent  LightningComponentBundle  force-app/main/default/lwc/ne
 
 ```
 
-2. Select **SFDX: Open Default Org** to log into your org.
-3. Navigate to **Setup:Lightning Components** to confirm that a new Lightning Web Component named `newCBComponent` is now available in your org.
+2. **SFDX: Open Default Org (SFDX: デフォルトの組織を開く)** コマンドで組織にログインします。
+3. **設定の Lightning コンポーネント** に移動して、`newCBComponent` 名前の新しい Lightning Web コンポーネントが利用可能であることを確認します。
 
-Congratulations on successfully creating and deploying a new Lightning Web Component.
+おめでとうございます。新しい Lightning Web コンポーネントを作成してデプロイすることができました。
 
-## To Learn More
+## リソース
 
-You can take your time and use these resources to learn more about what you can do in Code Builder:
+コードビルダーで何ができるかについて詳しく知るには、以下のリソースを活用してください。
 
 - [Visual Studio Code User Interface](https://code.visualstudio.com/docs/getstarted/userinterface) to get to know the Visual Studio code user interface.
 - [Salesforce Extensions](https://developer.salesforce.com/tools/vscode) to learn about all the powerful features of the Salesforce Extension for VS Code.

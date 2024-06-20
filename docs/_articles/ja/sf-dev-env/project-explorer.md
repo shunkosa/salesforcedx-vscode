@@ -1,9 +1,9 @@
 ---
-title: Project Explorer
+title: プロジェクトエクスプローラー
 lang: ja
 ---
 
-At the heart of Salesforce development is the Salesforce DX project. The project structure contains a default package directory, **force-app**:
+Salesforce 開発の中心となるのは Salesforce DX プロジェクトです。プロジェクト構造には、デフォルトのパッケージ ディレクトリ **force-app** が含まれています。
 
 ```text
 your-app
@@ -23,11 +23,11 @@ your-app
     └── package.xml
 ```
 
-See [Salesforce DX Project Structure and Source Format](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_source_file_format.htm) to learn about folders in the project.
+プロジェクト内のフォルダについて知るには、[『Salesforce DX プロジェクトの構造とソース形式』](https://developer.salesforce.com/docs/atlas.ja-jp.sfdx_dev.meta/sfdx_dev/sfdx_dev_source_file_format.htm)を参照してください。
 
-Some standard files you’ll see in your project that are prepopulated for you are:
+プロジェクト内で事前に入力されている標準ファイルには、次のようなものがあります。
 
-- **.gitignore**: Makes it easier to start using Git for version control.
-- **.prettierrc** and **.prettierignore**: Make it easier to start using Prettier to format your Aura components.
-- **.vscode/extensions.json** and **.vscode/launch.json**: Configure Replay Debugger, making it more discoverable and easier to use.
-- **.vscode/settings.json**: By default, this file has one setting, for push or deploy on save, which is set to false. You can change this value or add other settings.
+- **.gitignore**: バージョン管理に Git を使い始めるのが簡単になります。
+- **.prettierrc** and **.prettierignore**: Prettier を使用して Aura コンポーネントのフォーマットを簡単に開始できます。
+- **.vscode/extensions.json** and **.vscode/launch.json**: Replay デバッガを構成して、より見つけやすく、使いやすくします。
+- **.vscode/settings.json**: デフォルトでは、このファイルには保存時にプッシュまたはデプロイするための 1 つの設定があり、false に設定されています。この値を変更したり、他の設定を追加したりできます。

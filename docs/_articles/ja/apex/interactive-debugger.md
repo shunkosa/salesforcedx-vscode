@@ -23,7 +23,7 @@ VS Code で初めて Apex デバッガを使用するときは、次の設定手
 1. VS Code で、**[SFDX: Create a Default Scratch Org \(SFDX: デフォルトのスクラッチ組織を作成\)]** を実行します。
 1. `DebugApex` 機能を含むスクラッチ組織定義ファイルを選択します。
 1. スクラッチ組織の準備ができたら、組織の管理ユーザに Apex デバッガの権限を割り当てます。
-   1. VS Code で、**[SFDX: Open Default Org \(SFDX: デフォルト組織を開く\)]** を実行します。
+   1. VS Code で、**[SFDX: Open Default Org \(SFDX: デフォルトの組織を開く\)]** を実行します。
    1. ブラウザの [設定] で、[クイック検索] ボックスに「`Permission Sets`」と入力し、**[権限セット]** を選択します。
    1. **[新規]** をクリックします。
    1. 権限セットに覚えやすい名前を付けます \(`Debug Apex` など\)。

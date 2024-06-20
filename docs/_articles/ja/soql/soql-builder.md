@@ -1,13 +1,15 @@
 ---
-title: SOQL ビルダー (ベータ)
+title: SOQL ビルダー
 lang: ja
 ---
 
-SOQL ビルダーは、SOQL クエリを構築する際の当て推量をなくす VS Code 拡張機能です。SOQL クエリビルダーを使えば、誰でも視覚的にクエリを構築、実行し、その結果を調べることができます。ビジュアルエディタでクリックしてクエリを作成し、テキストエディタでクエリを保存して拡張することができます。クエリの結果をすぐに見ることができ、その結果を `.csv` や `.json` ファイルに保存することができます。
+## 概要
 
-> 注意: SOQL ビルダーは現在ベータです。バグを発見したかフィードバックがある場合は、[GitHub に issue をオープン](./ja/bugs-and-feedback)してください。より詳細な情報は、[ロードマップ](https://github.com/forcedotcom/salesforcedx-vscode/wiki/Roadmap) を参照してください。
+SOQL ビルダーは Salesforce 拡張機能パックの一部として利用可能です。SOQL ビルダーを使えば、誰でも視覚的にクエリを構築、実行し、その結果を調べることができるため、SOQL クエリの構築に推測の作業が不要になります。ビジュアルエディタでクリックしてクエリを作成し、テキストエディタでクエリを保存して拡張することができます。クエリの結果をすぐに見ることができ、その結果を `.csv` や `.json` ファイルに保存することができます。
 
-ベータ版の間は、以下を含むシンプルなクエリステートメントを構築することができます。
+## SOQL ビルダーの使用
+
+SOQL ビルダーを使用して次のようなシンプルなクエリステートメントを作成します。
 
 - 単一の sObject に対する FROM 句
 - 選択された sObject から項目を選択するための SELECT 句、または結果の集計を行う COUNT()
@@ -17,28 +19,15 @@ SOQL ビルダーは、SOQL クエリを構築する際の当て推量をなく�
 
   SOQL の構文についてより深く知り、テキストエディタでより複雑なクエリを構築するには、[『SOQL および SOSL リファレンス』](https://developer.salesforce.com/docs/atlas.ja-jp.soql_sosl.meta/soql_sosl/sforce_api_calls_soql.htm) を参照してください。
 
-**ベータ版の制限**
+> **_注:_**
+>
+> > - サポートされない構文であるエラーメッセージが表示されますが、SOQL ビルダー内で複雑なクエリを実行することはできます。
 
-- サポートされない構文であるエラーメッセージが表示されますが、SOQL ビルダー内で複雑なクエリを実行することはできます。
 - WHERE 句は非常に複雑なこともあります。SOQL ビルダーはシンプルな WHERE 句をサポートします。AND または OR を使用して条件を組み合わせることができますが、両方を使用することはできません。
 
-## SOQL ビルダー拡張機能のインストール
+### 設定
 
-[Salesforce 開発者向けツール](https://developer.salesforce.com/tools/vscode/en/getting-started/install)をコンピュータにインストールし設定します。
-
-- Visual Studio Code
-- Salesforce CLI
-- Salesforce Extension Pack 拡張機能
-- Java Platform, Standard Edition Development Kit
-
-次に、[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-soql) から SOQL ビルダー拡張機能をインストールします。
-
-## SOQL ビルダーの起動
-
-SOQL ビルダーは Salesforce DX プロジェクト上で起動します。どのように SOQL ビルダーを起動するかは、既に `.soql` ファイルがあるか、これから作成するのかによって異なります。
-
-### 前提
-
+- デフォルトの組織を認証していることを確認してください。デフォルトの組織への認証が期限切れの場合、SOQL ビルダーを使用できません。
 - VS Code で Salesforce DX プロジェクトを開いていること
 - クエリしたいオブジェクトのある組織に接続していること
 
@@ -91,11 +80,12 @@ COUNT() は集計関数なので、他に選択された項目はすべて削除
 
 <!-- **Tip:** If using the text editor to build your query, you can validate your syntax by turning on the SOQL Editor Remote Checks setting. ekapner update, 2/2/2021: this setting not ready for GA-->
 
-**ベータ版の制限**
+**制限**
 
-- SOQL ビルダーは現在、シンプルなクエリをインタラクティブに作成することをサポートしています。近いうちにさらに機能を追加する予定です。ただし、より複雑な `.soql` ファイルを開いて SOQL ビルダー内でクエリを実行することはできますが、テキストエディタを使って更新する必要があります。
+- SOQL ビルダーは現在、シンプルなクエリをインタラクティブに作成することをサポートしています。ただし、より複雑な `.soql` ファイルを開いて SOQL ビルダー内でクエリを実行することはできますが、テキストエディターを使って更新する必要があります。
 - 項目を選択する際、一度に 1 つしか選択 (クリック) できません。
 - [Run Query \(クエリの実行\)] をクリックする度に、[SOQL Query Results \(SOQL クエリの結果\)] タブが表示されます。結果を特定のクエリステートメントと関連付ける方法はありません。SOQL ビルダーのエディタには、最新の更新情報が反映されます。
+- 1 回の SOQL クエリで最大 2000 件のレコードを取得できます。
 
 **次**
 
@@ -120,11 +110,3 @@ COUNT() は集計関数なので、他に選択された項目はすべて削除
 SOQL 文を表示しながら、SOQL ビルダーとテキストエディタを簡単に切り替えることができます。
 
 ![SOQL ビルダーとテキストエディタの切り替えアイコンをクリックしてビューを切り替える](./images/soql-toggle.png)
-
-## 既知の問題
-
-### デフォルトの組織への認証が期限切れとなった場合に SOQL ビルダーを使用できない
-
-**内容:** デフォルトの組織の認証トークンが期限切れになるか、デフォルトのスクラッチ組織が期限切れになった場合、SOQL ビルダーが使用できない。
-
-**回避策:** デフォルトの組織を認証し、SOQL ビルダーを開き直します。うまくいかない場合は、VS Code を再起動します。

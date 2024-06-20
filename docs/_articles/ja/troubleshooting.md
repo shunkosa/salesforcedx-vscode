@@ -10,11 +10,29 @@ lang: ja
 コマンドパレットに SFDX コマンドが 1 つも表示されない場合は、Salesforce DX プロジェクトで作業していることと、Salesforce CLI が最新バージョンであることを確認してください。
 
 1. VS Code で開いているプロジェクトのルートディレクトリに `sfdx-project.json` ファイルがあることを確認します。Salesforce DX プロジェクトを設定していない場合は、『Salesforce DX 開発者ガイド』の[「プロジェクトの設定」](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_workspace_setup.htm)を参照してください。
-2. 『Salesforce DX 設定ガイド』の説明に従って[Salesforce CLI を更新](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_update_cli.htm)します。
+2. 『Salesforce DX 設定ガイド』の説明に従って [Salesforce CLI を更新](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_update_cli.htm)します。
 
 ## Java バージョンの設定
 
 関連資料: [Java の設定](./ja/vscode-desktop/java-setup)
+
+## Salesforce CLI パスの設定 (Windows)
+
+[Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli) を参照してください。Salesforce CLI のインストール後、After installing Salesforce CLI, if you get the error 'Salesforce CLI is not installed', most likely Salesforce CLI is not added as a path variable. To verify or add Salesforce CLI to your Windows path variable:
+
+1. `システム環境変数を編集` を検索します。
+   <img align="center" width="80%" height="80%" src="./images/troubleshooting_set_cli_path.1.png" alt="Windows の検索">
+
+2. `システムのプロパティ` で `環境変数` をクリックします。
+   <img align="center" width="80%" height="80%" src="./images/troubleshooting_set_cli_path.2.png" alt="システムのプロパティ">
+
+3. `ユーザー環境変数` の下の `Path` をダブルクリックします。
+   <img align="center" width="80%" height="80%" src="./images/troubleshooting_set_cli_path.3.png" alt="ユーザー環境変数">
+
+4. Salesforce CLI がエントリーとしてリストされていることを確認します。そうでなければ、新規をクリックして、Salesforce CLI をインストールしたパスをペーストします。例えば、`C:\Program Files\Salesforce CLI\bin` です。
+   <img align="center" width="80%" height="80%" src="./images/troubleshooting_set_cli_path.4.png" alt="Path のビュー">
+
+5. `OK` をクリックします。
 
 ## Apex 言語サーバの出力の監視
 

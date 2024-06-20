@@ -1,20 +1,20 @@
 ---
-title: What's Different
+title: デスクトップとの違い
 lang: en
 ---
 
-## What’s Different in Code Builder
+## Code Builder では何が違うか
 
-Code Builder unleashes the power of Salesforce Extensions for VS Code and offers the same rich features as the desktop version. No matter whether you're using VS Code on your desktop or Code Builder from a browser, the Salesforce extensions you access are the same. While the extensions generally function the same way regardless of how they're accessed, there are some nuances to be aware of:
+Code Builder は、VS Code 向け Salesforce 拡張機能の機能を最大限に活用し、デスクトップ バージョンと同じ豊富な機能を提供します。デスクトップで VS Code を使用しているか、ブラウザから Code Builder を使用しているかに関係なく、アクセスする Salesforce 拡張機能は同じです。拡張機能は通常、アクセス方法に関係なく同じように機能しますが、注意すべき点がいくつかあります。
 
-- Because your Code Builder instance runs in the cloud, authorizing an org from it follows a different (device) flow than the desktop version. See [Connect to Different Org](https://developer.salesforce.com/tools/vscode/en/codebuilder/cb-start/#connect-to-a-different-org) for steps.
-- Code Builder is installed as a managed package, and it comes with everything you need: VS Code, Salesforce extensions, and Salesforce CLI. No installation required on your local machine.
-- Unlike VS Code for desktop, you cannot access the Microsoft Marketplace from Code Builder. Instead, you can add extensions available in [Open VSX](https://open-vsx.org/) marketplace to your Code Builder environment. This means that you might see differences in the extensions that are available.
-- The third-party authorization sequence is different in Code Builder.
-- We keep the Salesforce extensions up to date for you in Code Builder. You don’t need to take any action.
+- Code Builder インスタンスはクラウドで実行されるため、そこからの組織の承認はデスクトップ バージョンとは異なる (デバイス) フローに従います。手順については、[別の組織に接続する](https://developer.salesforce.com/tools/vscode/ja/codebuilder/cb-start/#connect-to-a-different-org) を参照してください。
+- Code Builder は管理パッケージとしてインストールされ、VS Code、Salesforce 拡張機能、Salesforce CLI など、必要なものがすべて付属しています。ローカルマシンにインストールする必要はありません。
+- デスクトップ用の VS Code とは異なり、Code Builder から Microsoft Marketplace にアクセスすることはできません。代わりに、[Open VSX](https://open-vsx.org/) マーケットプレイスで入手可能な拡張機能を Code Builder 環境に追加できます。これは、使用可能な拡張機能に違いが生じる可能性があることを意味します。
+- Code Builder では、サードパーティの認証シーケンスが異なります。
+- Code Builder では、Salesforce 拡張機能が最新の状態に保たれます。ユーザー側で何もアクションを起こす必要はありません。
 
-## Known Gaps and Issues
+## 既知のギャップと不具合
 
-See [Known Gaps and Issues](https://github.com/forcedotcom/try-code-builder-feedback/wiki/Known-Gaps-and-Issues) for a list of issues we're aware of.
+既に検知されている不具合の一覧については、[既知のギャップと不具合 (英語)](https://github.com/forcedotcom/try-code-builder-feedback/wiki/Known-Gaps-and-Issues)を参照してください。
 
-If you notice any issues that haven't made our list, or want to provide other types of feedback, such as initial impressions or feature requests, [file an issue](https://github.com/forcedotcom/try-code-builder-feedback/issues) in the GitHub repo. We want to understand what features and enhancements are important to you.
+リストにない不具合を発見した場合、または最初の印象や機能リクエストなど、その他のフィードバックを提供したい場合は、GitHub リポジトリに [Issue を作成](https://github.com/forcedotcom/try-code-builder-feedback/issues)してください。どのような機能や改善があなたにとって重要なのかを理解したいと考えています。

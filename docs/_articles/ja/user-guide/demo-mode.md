@@ -7,4 +7,4 @@ lang: ja
 
 デモモードを有効にするには、`SFDX_ENV` という環境変数を追加し、その値を `DEMO`: `SFDX_ENV=DEMO` に設定します。
 
-イベントが終了したら、**[SFDX: Log Out from All Authorized Orgs \(SFDX: 承認済みのすべての組織からログアウト\)]** を実行します。
+イベントが終了したら、**[SFDX: Log Out from All Authorized Orgs \(SFDX: すべての認証済み組織からログアウト\)]** を実行します。

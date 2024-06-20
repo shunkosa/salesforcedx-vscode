@@ -67,7 +67,7 @@ Apex Replay Debugger の起動設定を作成するには、プロジェクト�
 
 ### Sandbox または本番組織の Apex Replay Debugger セッションの設定
 
-VS Code でスクラッチ組織または開発用のデフォルト組織として設定した組織を使用していない場合は、デバッグを開始する前に組織からデバッグログをダウンロードします。VS Code でログを開き、デバッグセッションを開始します。
+VS Code でスクラッチ組織または開発用のデフォルトの組織として設定した組織を使用していない場合は、デバッグを開始する前に組織からデバッグログをダウンロードします。VS Code でログを開き、デバッグセッションを開始します。
 
 1. VS Code で、分析するデバッグログを開きます。`VISUALFORCE` の場合はログレベルを `FINER` または `FINEST`、`APEX_CODE` の場合はログレベルを `FINEST` に設定したログを生成します。
 1. **[SFDX: Launch Apex Replay Debugger with Current File \(SFDX: 現在のファイルを使用して Apex Replay Debugger を起動\)]** を実行します。
