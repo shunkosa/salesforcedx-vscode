@@ -1,15 +1,15 @@
 - title:
     en: Salesforce Extensions for Desktop
-    ja: 使用開始
+    ja: デスクトップ用の Salesforce 拡張機能
   baseUrl: /vscode-desktop/
   children:
     - title:
         en: Salesforce Extensions for Desktop
-        ja: インストール
+        ja: デスクトップ用の Salesforce 拡張機能
       url: /vscode-desktop/desktop-intro
     - title:
         en: Install Salesforce Extensions for Desktop
-        ja: インストール
+        ja: デスクトップ用の Salesforce 拡張機能のインストール
       url: /vscode-desktop/install
     - title:
         en: Other Recommended Extensions
@@ -25,7 +25,7 @@
       url: /vscode-desktop/tips-and-tricks
 - title:
     en: Code Builder
-    ja: コードビルダー（ベータ版）
+    ja: コードビルダー
   baseUrl: /codebuilder/
   children:
     - title:
@@ -34,27 +34,27 @@
       url: /codebuilder/about
     - title:
         en: What's Different
-        ja: 何が違うの
+        ja: デスクトップとの違い
       url: /codebuilder/cb-diffs
     - title:
         en: Set Up Code Builder
-        ja: コードビルダーを設定する
+        ja: コードビルダーの設定
       url: /codebuilder/cb-setup
     - title:
         en: Get Started with Code Builder
-        ja: コードビルダーを使い始める
+        ja: コードビルダーの使用開始
       url: /codebuilder/cb-start
     - title:
         en: Remove Code Builder
-        ja: コードビルダーをアンインストールする
+        ja: コードビルダーのアンインストール
       url: /codebuilder/cb-remove
     - title:
         en: Useful Tips
-        ja: コードビルダーを使い始める
+        ja: 便利なヒント
       url: /codebuilder/cb-tips
 - title:
     en: Einstein for Developers (Beta)
-    ja: Einstein for Developers (Beta)
+    ja: Einstein for Developers (ベータ)
   baseUrl: /einstein/
   children:
     - title:
@@ -112,24 +112,24 @@
   children:
     - title:
         en: Development Models Overview
-        ja: 開発モデル
+        ja: 概要
       url: /sf-dev-models/development-models
     - title:
         en: Org Dev Model
-        ja: 開発モデル
+        ja: 組織開発モデル
       url: /sf-dev-models/orgdev
     - title:
         en: Package Development Model
-        ja: 開発モデル
+        ja: パッケージ開発モデル
       url: /sf-dev-models/pkgdev
 - title:
     en: Salesforce Development Environment
-    ja: ユーザガイド
+    ja: Salesforce 開発環境
   baseUrl: /sf-dev-env/
   children:
     - title:
-        en: Overview 
-        ja: コマンドリファレンス
+        en: Overview
+        ja: 概要
       url: /sf-dev-env/env-overview
     - title:
         en: Default Org
@@ -137,15 +137,15 @@
       url: /sf-dev-env/default-org
     - title:
         en: Command Palette
-        ja: コマンドリファレンス
+        ja: コマンドパレット
       url: /sf-dev-env/vscode-commands
     - title:
         en: Project Explorer
-        ja: コマンドリファレンス
+        ja: プロジェクトエクスプローラ
       url: /sf-dev-env/project-explorer
     - title:
         en: Org Browser
-        ja: デフォルトの組織
+        ja: 組織ブラウザ
       url: /sf-dev-env/org-browser
     - title:
         en: Custom Templates
@@ -153,13 +153,13 @@
       url: /sf-dev-env/byotemplate
 - title:
     en: Additional Tooling
-    ja: ユーザガイド
+    ja: 追加のツール
   baseUrl: /user-guide/
   children:
     - title:
         en: Prettier Code Formatter
         ja: Prettier コードフォーマッタ
-      url: /user-guide/prettier   
+      url: /user-guide/prettier
     - title:
         en: Demo Mode
         ja: デモモード
@@ -175,7 +175,7 @@
       url: /apex/apex-overview
     - title:
         en: Apex Development Quick Start
-        ja: 始めましょう
+        ja: クイックスタート
       url: /apex/apex-get-started
     - title:
         en: Apex Language Server
@@ -224,7 +224,7 @@
       url: /aura/writing
 - title:
     en: Salesforce Functions
-    ja: Salesforce の機能
+    ja: Salesforce Functions
   baseUrl: /functions/
   children:
     - title:
@@ -280,7 +280,7 @@
       url: /soql/soql-tasks/
 - title:
     en: Source Control
-    ja: ユーザガイド
+    ja: ソース制御
   baseUrl: /source-control/
   children:
     - title:
@@ -289,7 +289,7 @@
       url: /source-control/source-format
 - title:
     en: Deploy Changes
-    ja: ユーザガイド
+    ja: 変更のデプロイ
   baseUrl: /deploy-changes/
   children:
     - title:
@@ -302,15 +302,15 @@
       url: /deploy-changes/manifestbuilder
     - title:
         en: Detect Conflicts
-        ja: 競合の検知
+        ja: 競合の検出
       url: /deploy-changes/detect-conflicts
     - title:
         en: Deploy on Save
         ja: 保存時のデプロイ
       url: /deploy-changes/deploy-on-save
 - title:
-        en: Remote Development
-        ja: リモートコンテナ
+    en: Remote Development
+    ja: リモートコンテナ
   url: /remote-development
 - title:
     en: FAQ
