@@ -38,7 +38,7 @@
     "mock-spawn": "0.2.6",
     "nyc": "^15.1.0",
     "prettier": "3.0.3",
-    "request-light": "^0.7.0",
+    "request-light": "^0.8.0",
     "sinon": "^13.0.1",
     "source-map-support": "^0.4.15",
     "typescript": "^5.2.2"
